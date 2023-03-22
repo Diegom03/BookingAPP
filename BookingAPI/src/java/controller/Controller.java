@@ -1,5 +1,6 @@
 package controller;
 
+import action.HotelAction;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -19,13 +20,9 @@ public class Controller extends HttpServlet {
 
         switch (arrayAction[0]) {
             // PELICULA.FIND_ALL
-            case "PELICULA":
-                out.print(new PeliculaAction().execute(request, response));
+            case "HOTEL":
+                out.print(new HotelAction().execute(request, response));
                 break;
-            case "USUARIO":
-                out.print(new UsuarioAction().execute(request, response));
-                break;
-            //USUARIO.LOGIN
             default:
                 break;
         }
